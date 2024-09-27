@@ -1,0 +1,240 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Icon" href="./img/logo.jpg">
+    
+    <title>Nike Shop by Leng</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+
+    <!-- CBN of Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
+    <!-- Link Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!-- ================= Menu ================ -->
+     <nav class="menu navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid px-5 confull">
+        <a class="navbar-brand text-uppercase fw-bold" href="#">
+          <img src="./img/logo.jpg" class="rounded-circle" width="50px" height="50px" alt="">
+          Leng Nike
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fs-5 ">
+            <li class="nav-item me-5 text-center">
+              <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="./index.html">Home</a>
+            </li>
+          
+            <li class="nav-item me-5 text-center">
+              <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="./allshoe.html">Shoes</a>
+            </li>
+
+            <li class="nav-item me-5 text-center">
+              <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="./allcloths.html">Shirt</a>
+            </li>
+
+            <li class="nav-item me-5 text-center">
+              <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="./allpants.html">Pants</a>
+            </li>
+
+            <li class="nav-item me-5 text-center">
+              <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="#">All Products</a>
+            </li>
+
+          </ul>
+
+          <input type="text" name="" class="" placeholder="Search here" id="searchbarpro">
+
+
+          <ul class="navbar-nav">
+              <li class="nav-item text-center position-relative">
+                  <a class="nav-link text-uppercase fw-bold text-dark tagA" aria-current="page" href="#">
+                    <i class="fa-solid fa-cart-plus" id="shop"></i>
+                      <span class="position-absolute top-0 badge bg-danger rounded-pill start-100 translate-middle" id="countt"></span>
+                  </a>
+              </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+      <!-- ================ store ============ -->
+      
+      <div class="box_order">
+        <div class="float-end mb-5">
+            <button type="button" class="btn"><i class="fa-solid fa-x" id="btnclose"></i></button>
+        </div>
+        <h1 class="text-center pb-4 border-bottom border-3 border-danger">Order Product</h1>
+        <div class="row g-3 py-4" id="row_card">
+
+        </div>
+        <div class="amount d-flex justify-content-between border-top py-4 border-3 border-danger">
+            <h5>Total: </h5>
+            <h5 class="total" id="cartTotal"></h5>
+        </div>
+        <div class="buttomCard">
+            <button type="button" class="float-start w-25 h-100 border-0 btn btn-danger" id="btnCancel">Cancel</button>
+            <button type="button" class="float-end w-50 h-100 border-0 btn btn-warning" id="checkbtn" onclick=" pay() ">Check</button>
+        </div>
+    </div>
+
+    
+    <!-- <div class="container p-5 my-5 shadow">
+        <div class="row g-4" id="itempro">
+           
+        </div>
+    </div> -->
+     </div>
+
+
+     <!-- ============= item =========== -->
+     <!-- <div class="container my-5 py-5">
+        <div class="title text-center mb-5">
+          <h2 class="position-relative d-inline-block border-start border-5 px-3 border-danger ">Most Populars Shoes</h2>
+        </div>
+      </div> -->
+
+      <!-- ========== Sub Item =========== -->
+       <!-- <div class="container">
+        <div class="row g-5 product-container" id="itempro">
+
+
+
+        </div>
+      </div> -->
+
+          
+
+       <!-- ========== Discount =========== -->
+       <div class="container">
+        <div class="title text-center mb-5 py-5">
+          <h2 class="position-relative d-inline-block text-danger border-start border-5 px-3 border-danger"> All Products</h2>
+        </div>
+       </div>
+      
+       <div class="container mb-5">
+        <div class="row g-5 product-container" id="shoeDis">
+          
+         
+        
+
+        </div>
+       </div>
+
+
+          <!-- ============= item =========== -->
+          <!-- <div class="container my-5">
+            <div class="title text-center mb-5">
+              <h2 class="position-relative d-inline-block border-start border-5 px-3 border-danger ">Pants</h2>
+            </div>
+          </div> -->
+    
+          <!-- ========== Sub Item =========== -->
+           <!-- <div class="container mb-5">
+            <div class="row g-5 product-container" id="shoePants">
+    
+    
+            </div>
+          </div> -->
+
+
+            
+      <!-- hoodies -->
+
+          <!-- ============= item =========== -->
+          <!-- <div class="container my-5 mb-5 mt-5 pt-5">
+            <div class="title text-center mb-5">
+              <h2 class="position-relative d-inline-block border-start border-5 px-3 border-danger  ">Hoodies</h2>
+            </div>
+          </div> -->
+    
+          <!-- ========== Sub Item =========== -->
+       <!-- <div class="container mb-5">
+        <div class="row g-5 product-container" id="shoeHoodies">
+
+   
+        </div>
+      </div> -->
+
+
+
+
+      <!-- T-Shirts -->
+       <!-- ============= item =========== -->
+       <!-- <div class="container my-5 mb-5">
+        <div class="title text-center mb-5">
+          <h2 class="position-relative d-inline-block border-start border-5 px-3 border-danger ">T-Shirts</h2>
+        </div>
+      </div> -->
+
+      <!-- ========== Sub Item =========== -->
+   <!-- <div class="container mb-5">
+    <div class="row g-5 product-container" id="showShirt">
+
+    </div>
+  </div> -->
+
+          <!-- ========== Footer ============== -->
+        <div class="container-fluid bg-dark">
+            <div class="container py-5">
+              <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <h2 class="text-white">Nike</h2>
+                    <p class="text-white text-muted my-4">Nike products are known for their innovative design, combining performance and style.</p>
+  
+                    <span class="span_icon me-2 mb-2"><i class="fa-brands fa-twitter text-white"></i></span>
+                    <span class="span_icon me-2 mb-2"><i class="fa-brands fa-facebook text-white"></i></span>
+                    <span class="span_icon me-2 mb-2"><i class="fa-brands fa-youtube text-white"></i></span>
+                    <span class="span_icon me-2 mb-2"><i class="fa-brands fa-instagram text-white"></i></span>
+                </div>
+  
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <h2 class="text-white">Address</h2>
+                    <p class="text-white text-muted my-4"><i class="fa-solid fa-location-dot"></i> 123 Street, New York, USA</p>
+                   
+                    <p class="text-white text-muted my-4"> <i class="fa-solid fa-phone"></i> 0123456789</p>
+                    
+                    <p class="text-white text-muted my-4"> <i class="fa-solid fa-envelope"></i> chhimseanglengNike@gmail.com</p>
+  
+                </div>
+  
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <h2 class="text-white">Quick Link</h2>
+                    <p class="text-white text-muted">> About Us</p>
+                    <p class="text-white text-muted">> Contact Us</p>
+                    <p class="text-white text-muted">> Our Services</p>
+                    <p class="text-white text-muted">> Term & Conitions</p>
+                    <p class="text-white text-muted">> Support</p>
+  
+                </div>
+  
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                  <h2 class="text-white">See More</h2>
+                  <p class="text-muted my-4">Log in/Sign up to see more about us.</p>
+  
+                  <form action="">
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control shadow-none border-success" placeholder="Enter your email..." name="" id="">
+                      <button type="button" class="btn btn-outline-success border-start-0">Submit</button>
+                    </div>
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+<script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
